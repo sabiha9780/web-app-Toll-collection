@@ -1,0 +1,45 @@
+﻿  @using WebAppTollCollection.ViewModel
+
+@model LoginUser
+@{
+    Layout = "_Layout";
+}
+<div class="row">
+    <div class="col-md-4">
+<h1 class="text-center title-page">Log In</h1>
+<div class="login-form">
+    <form id="customer-form" action="#" method="post">
+        <div>
+            <div asp-validation-summary="All"></div>
+            <div class="form-group no-gutters">
+                @* <label asp-for="UserEmail"></label> *@
+                <input asp-for="UserEmail" class="form-control" type="email" placeholder=" Email" />
+                <span asp-validation-for="UserEmail"></span>
+            </div>
+            <div class="form-group no-gutters">
+                <div class="input-group js-parent-focus">
+                    @*  <label asp-for="Password"></label> *@
+                    <input asp-for="Password" class="form-control js-child-focus js-visible-password" placeholder="Password" />
+                    <span asp-validation-for="Password"></span>
+
+                </div>
+            </div>
+            <div class="no-gutters text-center">
+                <div class="forgot-password">
+                    <a rel="nofollow" asp-action="register">New?</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="text-center no-gutters">
+                <button class="btn btn-primary" data-link-action="sign-in" type="submit">
+                    Sign in
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+  
+
+
